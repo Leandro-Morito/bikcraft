@@ -1,0 +1,171 @@
+:root {
+    /* cores */
+    --c1: #f7f7f7;
+    --c2: #ededed;
+    --c3: #dedede;
+    --c4: #cccccc;
+    --c5: #b2b2b2;
+    --c6: #9c9c9c;
+    --c7: #717171;
+    --c8: #595959;
+    --c9: #404040;
+    --c10: #2e2e2e;
+    --c11: #111111;
+    --c12: #000000;
+    --w: #ffffff;
+
+    /* cores para paragrafos */
+    --p1: #fb0;
+    --p2: #e4a30b;
+    --p3: #a66f00;
+    --p4: #640;
+    --p5: #320;
+
+    /* espaços */
+    --esp004: 0.25rem;
+    --esp008: 0.5rem;
+    --esp012: 0.75rem;
+    --esp016: 1rem;
+    --esp020: 1.25rem;
+    --esp024: 1.5rem;
+    --esp032: 2rem;
+    --esp036: 2.25rem;
+    --esp040: 2.5rem;
+    --esp048: 3rem;
+    --esp060: 3.75rem;
+    --esp072: 4.5 rem;
+    --esp080: 5rem;
+    --esp120: 7.5rem;
+    --esp160: 10rem;
+    --esp200: 12.5rem;
+}
+
+
+
+
+/***************************************** global *************************************************/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /* esqueci de colocar font family */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*********************************************** header ***************************************************/
+
+.header-bg {
+    background-color: var(--c12);
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--esp020);
+    box-sizing: border-box;
+    gap: var(--esp020);
+
+
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp040);
+}
+
+.header-menu a {
+    padding: var(--esp016) 0px;
+    color: var(--w);
+    font-size: 1.125rem;
+    line-height: 2rem;
+    position: relative;
+    display: inline-block;
+
+}
+
+.header-menu a::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    display: block;
+    background-color: var(--w);
+    position: absolute;
+    transition: 0.3s;
+
+}
+
+.header-menu a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .header-menu a {
+        padding: 12px 16px;
+        background-color: var(--c11);
+        border-radius: 5px;
+    }
+
+    .header-menu a:hover {
+        background-color: var(--c9);
+    }
+
+    .header-menu a::after {
+        display: none;
+    }
+
+    .header-menu {
+        gap: var(--esp020)
+    }
+
+}
+
+@media (max-width: 600px) {
+    .header-menu {
+        gap: var(--esp012);
+    }
+
+    .header-menu a {
+        padding: var(--esp008);
+        font-size: 0.875rem;
+    }
+
+
+
+}
+
+
+@media (max-width: 450px) {
+    .header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-menu {
+        justify-content: center;
+        gap: var(--esp016);
+    }
+
+    .header-menu a {
+        padding: var(--esp008);
+    }
+}
+
+
+/*********************************************** main ***************************************************/
